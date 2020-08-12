@@ -1,0 +1,81 @@
+<div class="layui-fluid">
+	<form class="layui-form">
+		<div class="layui-form-item">
+			<div class="layui-inline">
+				<label class="layui-form-label">工单号</label>
+				<div class="layui-input-inline">
+					<input type="text" name="orderid" placeholder="请输入" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">工单标题</label>
+				<div class="layui-input-inline">
+					<input type="text" name="title" placeholder="请输入" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">业务性质</label>
+				<div class="layui-input-inline">
+					<input type="text" name="attr" placeholder="请输入" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-inline">
+				<label class="layui-form-label">受理人</label>
+				<div class="layui-input-inline">
+					<input type="text" name="accept" placeholder="请输入" autocomplete="off" class="layui-input">
+				</div>
+			</div>
+			<div class="layui-inline">
+				<a class="layui-btn layui-btn-sm licon-btn-blue"><i class="layui-icon layui-icon-search layuiadmin-button-btn"></i></a>
+			</div>
+		</div>
+	</form>
+
+	<table id="LAY-app-workorder" lay-filter="LAY-app-workorder"></table>
+	<script type="text/html" id="table-system-order">
+		<a class="layui-btn layui-btn-xs licon-btn-blue" lay-event="edit">编辑</a>
+        <a class="layui-btn layui-btn-xs licon-btn-green" lay-event="comfirm">确认</a>
+        <a class="layui-btn layui-btn-xs licon-btn-red" lay-event="del">删除</a>
+      </script>
+</div>
+
+<script>
+	layui.use(['form', 'table'], function() {
+		var $ = layui.$,
+			form = layui.form,
+			table = layui.table;
+
+		table.render({
+			elem: '#LAY-app-workorder',
+			url: './json/workorder/demo.js' //模拟接口
+				,
+			cols: [
+				[{
+					field: 'orderid',
+					title: '工单号',
+					sort: true
+				}, {
+					field: 'attr',
+					title: '业务性质'
+				}, {
+					field: 'title',
+					title: '工单标题'
+				}, {
+					field: 'progress',
+					title: '进度',
+					templet: '#progressTpl'
+				}, {
+					title: '操作',
+					toolbar: '#table-system-order'
+				}]
+			],
+			page: true,
+			limit: 10,
+			limits: [10, 15, 20, 25, 30],
+			text: '对不起，加载出现异常！',
+			done: function() {
+
+			}
+		});
+	});
+</script>

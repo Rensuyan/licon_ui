@@ -1,0 +1,42 @@
+/* 
+ * 导航皮肤， 基于layui
+ * Author:licon
+ */
+
+/* 导航皮肤，左侧和上方背景色*/
+.layui-layout-admin .layui-header {background-color: #1C2777 !important;}
+.layui-side.layui-side-menu .layui-side-scroll {background: #363a45 !important;}
+/*上方选中*/
+.layui-header .layui-nav .layui-nav-item.layui-this,.layui-header .layui-nav .layui-nav-item:hover {background: rgba(255, 255, 255, 0.15);}
+.layui-layout-admin .layui-header .layui-nav .layui-this::after {height: 4px;background-color: rgba(255,255,255,.3);}
+.layui-layout-admin .layui-header .layui-nav-bar{height: 2px;background-color: rgba(255,255,255,.3);}
+/*左侧树形导航*/
+.layui-side.layui-side-menu .layui-nav-tree .layui-nav-bar,
+.layui-side.layui-side-menu .layui-nav-tree .layui-this,
+.layui-side.layui-side-menu .layui-nav-tree .layui-this>a,
+.layui-side.layui-side-menu .layui-nav-tree .layui-nav-child dd.layui-this,
+.layui-side.layui-side-menu .layui-nav-tree .layui-nav-child dd.layui-this a {
+	background-color: #467CD4 !important;
+}
+.layui-side.layui-side-menu .layui-nav .layui-nav-item a:hover{background: rgba(255, 255, 255, 0.1);}
+.layui-side.layui-side-menu .layui-nav .layui-nav-item a {height: 28px;line-height: 28px;padding-left: 35px;}
+.layui-side.layui-side-menu .layui-nav .layui-nav-child a{padding-top: 3px;padding-bottom: 3px;padding-left: 55px;}
+.layui-side-menu .layui-nav{margin-top: 0px;}
+/*文字*/
+.layui-layout-admin .layui-header * {font-size: 16px;}
+.layui-side-menu .layui-nav .layui-nav-item a,.layui-layout-admin .layui-header .layui-nav .layui-nav-item a,.layui-layout-admin .layui-header a cite,.layui-layout-admin .layui-logo {color: #fff;}
+.layui-layout-admin .layui-header .layui-nav .layui-nav-item a:hover {color: #e9e9e9;}
+.layui-layout-admin .layui-header .layui-nav .layui-nav-more {border-top-color: #fff;}
+.layui-layout-admin .layui-header .layui-nav .layui-nav-more.layui-nav-mored {border-color: transparent;border-bottom-color: #fff;}
+.layui-layout-admin .layui-header .layui-nav .layui-nav-item .layui-nav-child a {color: #666;}
+/*导航栏高度：40px*/
+.layui-side.layui-side-menu {margin-top: 40px;}
+.layui-layout-admin .layui-body {top: 40px !important;}
+.layui-layout-admin .layui-header {height: 40px;}
+.layui-layout-admin .layui-logo,.layui-layout-admin .layui-header .layui-nav .layui-nav-item {line-height: 40px;height: 40px;}
+.layui-nav .layui-nav-item .layui-nav-child {line-height: 26px;}
+.layui-layout-admin .layui-header .layui-nav-child{top: 45px;}
+/*logo*/
+.layui-layout-admin .layui-header .layui-logo {width: auto;text-align: left;}
+.layui-layout-admin .layui-header .layui-logo span {font-size: 18px;font-weight: 540;}
+.layui-layout-admin .layui-header .layui-logo {background: none !important;border: none;box-shadow: none;}

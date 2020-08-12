@@ -1,0 +1,73 @@
+
+/* 私信格式列表 */
+.licon-list-simple-letter-item{position: relative;display: block;padding: 10px 15px;}
+.licon-list-simple-letter .layui-card-body{padding:0;}
+.licon-list-simple-letter .layui-card-body img{width: 32px;height: 32px;border-radius: 50%;margin-top: 10px;}
+.licon-list-simple-letter .layui-card-body .meida-left{display: table-cell;padding-right: 10px;}
+.licon-list-simple-letter .layui-card-body .meida-right{display: table-cell;vertical-align: top;}
+.licon-list-simple-letter .layui-card-body a:hover{background: #F2F2F2;}
+.licon-list-simple-letter .layui-card-body{background: #fff;}
+
+/* 带图片的联系格式列表 */
+.licon-list-caller{background: #fff;padding: 10px;}
+.licon-list-caller em{font-style: normal;}
+.licon-list-caller .caller-fl{float: left;}
+.licon-list-caller .caller-fr{float: right;}
+.licon-list-caller .caller-seach{position: relative;padding-bottom:40px;}
+.licon-list-caller .caller-seach .caller-icon{font-size: 18px;position: absolute;top: 9px;}
+.licon-list-caller .caller-seach-icon{left: 6px;}
+.licon-list-caller .caller-dump-icon{right: 6px;cursor: pointer;}
+.licon-list-caller .caller-pl32{padding:0 32px;}
+.licon-list-caller .caller-tab{margin:0;}
+.licon-list-caller .caller-contar .caller-item{padding:10px 0;overflow: hidden;border-bottom: 1px solid #e0e0e0;}
+.licon-list-caller .caller-contar .caller-item .caller-main{margin-left: 20px;}
+.licon-list-caller .caller-contar .caller-item .caller-main p{line-height: 100%;padding:8px 0;}
+.licon-list-caller .caller-contar .caller-item .caller-main p:first-child{padding-top:0;}
+.licon-list-caller .caller-contar .caller-item .caller-main em{margin-left: 5px;}
+.licon-list-caller .caller-contar .caller-item .caller-main .caller-adds i{padding-right: 5px;margin:0;}
+.licon-list-caller .caller-contar .caller-item .caller-main .caller-adds{padding-bottom:12px;}
+.licon-list-caller .caller-contar .caller-iconset i{margin:0 5px;}
+.licon-list-caller .caller-contar .caller-iconset i:first-child{margin-left: 0;}
+.licon-list-caller .caller-contar .caller-img{width: 40px;height: 40px;border-radius: 100%;}
+
+/* 留言格式列表 */
+.licon-list-message{padding: 0 10px 10px 10px;}
+.licon-list-message li{position: relative; padding: 10px 0; border-bottom: 1px solid #EEE;}
+.licon-list-message li h3{padding-bottom: 5px; font-weight: 700;}
+.licon-list-message li>span{color: #999;}
+
+/* 商品格式版块 */
+.licon-panel-goods{background: #fff;border:1px solid transparent;}
+.licon-panel-goods:hover{border:1px solid #e8e8e8;}
+.licon-panel-goods img{width: 100%;}
+.licon-panel-goods-text{padding:20px;}
+.licon-panel-goods-text .info{height: 40px;font-size: 14px;line-height: 20px;width: 100%;overflow: hidden;margin-bottom:10px;}
+.licon-panel-goods-text .price{font-size: 14px;}
+.licon-panel-goods-text .price b{margin-right: 20px;}
+.licon-panel-goods-text .price p{display: inline-block;}
+.licon-panel-goods-text .flow{text-align: right;float: right;}
+
+/* 个人联系方式格式版块 */
+.licon-panel-contact{background: #fff;padding: 5px;}
+.licon-panel-contact .licon-panel-contact-left{text-align: center;width: 80px;display: inline-block;vertical-align: top;}
+.licon-panel-contact .licon-panel-contact-right{width: calc(100% - 85px);display: inline-block;vertical-align: top;}
+.licon-panel-contact .licon-panel-contact-left img{max-width: 80%;border-radius: 50%;margin-top: 5px;}
+.licon-panel-contact .layadmin-font-blod{font-weight: 600;}
+.licon-panel-contact .licon-panel-contact-title{margin:5px 0 10px 0;}
+.licon-panel-contact .licon-panel-contact-textimg{line-height: 25px;margin-bottom: 10px;}
+.licon-panel-contact .licon-panel-contact-address{line-height: 1.5;margin-bottom: 20px;}
+
+/* 信息条格式板块-纵向 */
+.licon-bar-info-col{background: #fff;padding: 5px;}
+.licon-bar-info-col .licon-bar-left .layui-icon,.licon-bar-info-col .licon-bar-left .iconfont{font-size: 40px;}
+.licon-bar-info-col .licon-bar-left{display: inline-block;width:40px;vertical-align: middle;}
+.licon-bar-info-col .licon-bar-right{display: inline-block;width: calc(100% - 50px);vertical-align: middle;}
+.licon-bar-info-col .licon-bar-right>div{height: 30px;line-height: 30px;}
+.licon-bar-info-col .bar-info-value{font-size: 18px;font-family: ccxyt-notchar;color: #0077ff;}
+/* 信息条格式板块-横向 */
+.licon-bar-info-row{background: #fff;padding: 5px;}
+.licon-bar-info-row .licon-bar-left .layui-icon,.licon-bar-info-row .licon-bar-left .iconfont{font-size: 30px;}
+.licon-bar-info-row .licon-bar-left{display: inline-block;width:30px;vertical-align: middle;}
+.licon-bar-info-row .licon-bar-right{display: inline-block;width: calc(100% - 40px);vertical-align: middle;}
+.licon-bar-info-row .licon-bar-right>div{height: 30px;line-height: 30px;display: inline-block;vertical-align: middle;}
+.licon-bar-info-row .bar-info-value{font-size: 18px;font-family: ccxyt-notchar;color: #0077ff;}

@@ -1,0 +1,101 @@
+/* 基础样式， 基于layui
+licon 2019.03.07 16:32
+(1)系统按钮颜色、下拉框颜色、分页颜色等
+(2)系统字体
+(3)系统字体颜色
+ */
+.layui-body{background: url(../../res/3.jpg);}
+.layui-card,.layui-table{background: rgba(255,255,255,.1);}
+.layui-card .layui-table{background: none;}
+.layui-card .layui-card-header{border-bottom: none;}
+/* 表单 */
+.layui-input, .layui-select, .layui-textarea{background: none;}
+
+.layui-layer.layui-layer-dialog .layui-form-checkbox[lay-skin="primary"]:hover i,
+.layui-layer.layui-layer-page .layui-form-checkbox[lay-skin="primary"]:hover i,
+.layui-form-checkbox[lay-skin="primary"]:hover i ,
+.layui-form-checked[lay-skin="primary"] i,
+.layui-btn-primary:hover{
+	border-color: #467CD4;
+}
+
+.layui-form-onswitch,
+.layui-layer.layui-layer-dialog .layui-layer-btn .layui-layer-btn0,
+.layui-layer.layui-layer-page .layui-layer-btn .layui-layer-btn0,
+.layui-form-checked[lay-skin="primary"] i{
+	border-color: #467CD4;
+	background-color: #467CD4;
+}
+.layui-form-item input[disabled][type='checkbox']+.layui-form-checked[lay-skin="primary"] i{
+	background-color: rgba(70, 124, 212,0.3);
+	border-color: rgba(70, 124, 212,0.3);
+}
+.layui-form-checked i,
+.layui-form-checked:hover i .layui-form-radio>i:hover,
+.layui-form-radioed>i,
+.layui-tab-brief>.layui-tab-title .layui-this,
+.layui-laypage a:hover,
+.layui-form-radio>i:hover,
+.layui-tab-brief>.layui-tab-title .layui-this{
+	color: #467CD4;
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this::after,
+.layui-tab-brief>.layui-tab-title .layui-this::after {
+	border-bottom: 2px solid #467CD4;
+}
+
+
+.layui-laydate .layui-laydate-content .layui-this,
+.layui-laypage .layui-laypage-curr .layui-laypage-em,
+.layui-form-select dl dd.layui-this {
+	background-color: #467CD4 !important;
+}
+
+/*拓展表单*/
+
+div[xm-select-skin="normal"] .xm-select-title div.xm-select-label > span,
+div[xm-select-skin="normal"] .xm-select-title div.xm-select-label > span i{
+	background-color: #467CD4 !important;
+	border-color: #467CD4 !important;
+}
+div[xm-select-skin="normal"] dl dd.xm-select-this:not(.xm-dis-disabled) i ,
+.dtree-nav-checkbox-div .dtree-layui-checkbox:hover,
+.dtree-nav-checkbox-div .dtree-layui-choose{
+	color: #467CD4 !important;
+}
+div[xm-select-skin="normal"] dl dd:not(.xm-dis-disabled) i{
+	border-color: #467CD4 !important;
+}
+.dtree-nav-checkbox-div .dtree-layui-checkbox{
+	color: #d2d2d2;
+}
+/*字体、字体颜色、字号*/
+
+body,
+input.layui-input,
+textarea,
+a,
+select,
+.layui-table,
+.layui-card-header,
+.layui-tab-title{
+	color: #fff;
+}
+
+/*body,
+.layui-table td,
+.layui-table th,
+.layui-nav-item .iconfont,
+.layui-layer-title,
+.layui-layer.layui-layer-dialog .layui-layer-content,
+.layui-layer.layui-layer-page .layui-layer-content,
+.layui-form-radio div,
+.layui-tab-title,
+.layui-form-label,
+.layui-card-header,
+.layui-form-checkbox span,
+.layui-tab-title li,
+.layui-card-header {
+	font-size: 14px !important;
+}*/

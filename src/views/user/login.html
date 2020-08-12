@@ -1,0 +1,56 @@
+<script type="text/html" template>
+	<link rel="stylesheet" href="{{ layui.setter.base }}style/common/common.css?v={{ layui.admin.v }}-1" media="all">
+	<link rel="stylesheet" href="{{ layui.setter.base }}style/common/base.css?v={{ layui.admin.v }}-1" media="all">
+	<link rel="stylesheet" href="{{ layui.setter.base }}style/login.css?v={{ layui.admin.v }}-1" media="all">
+</script>
+<div class="layadmin-user-login" id="LAY-user-login">
+	<div class="layadmin-user-login-logo">
+		<script type="text/html" template>
+			<img src="{{ layui.setter.base }}style/res/licon1.png" />
+		</script>
+	</div>
+	<div class="layadmin-user-login-main">
+		<div class="layadmin-user-login-title">
+			<h2>OLM照明监控平台软件</h2>
+		</div>
+		<div class="layadmin-user-login-header">用户登录</div>
+		<div class="layadmin-user-login-box layadmin-user-login-body layui-form">
+			<div class="layui-form-item">
+				<label class="layadmin-user-login-icon layui-icon layui-icon-username" for="LAY-user-login-username"></label>
+				<input type="text" name="username" id="LAY-user-login-username" lay-verify="required" placeholder="用户名" class="layui-input">
+			</div>
+			<div class="layui-form-item">
+				<label class="layadmin-user-login-icon layui-icon layui-icon-password" for="LAY-user-login-password"></label>
+				<input type="password" name="password" id="LAY-user-login-password" lay-verify="required" placeholder="密码" class="layui-input">
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-row">
+					<div class="layui-col-xs7">
+						<label class="layadmin-user-login-icon layui-icon layui-icon-vercode" for="LAY-user-login-vercode"></label>
+						<input type="text" name="vercode" id="LAY-user-login-vercode" lay-verify="required" placeholder="图形验证码" class="layui-input">
+					</div>
+					<div class="layui-col-xs5">
+						<div style="margin-left: 10px;">
+							<img src="" class="layadmin-user-login-codeimg" id="LAY-user-get-vercode">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="layui-form-item" style="margin-bottom: 0;">
+				<button class="layui-btn layui-btn-fluid" lay-submit lay-filter="LAY-user-login-submit" type="submit">登 录</button>
+			</div>
+		</div>
+	</div>
+	<div class="layadmin-user-login-footer">
+		<p>推荐浏览器  Firefox/360浏览器</p>
+		<p>
+			© 版权所有 南京理控物联技术有限公司
+			<a href="http://www.licon.cn/" target="_blank">www.licon.cn</a>
+		</p>
+	</div>
+
+</div>
+
+<script>
+	
+</script>

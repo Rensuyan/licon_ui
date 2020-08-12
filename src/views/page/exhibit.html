@@ -1,0 +1,156 @@
+<!--巡检参数-->
+<div class="layui-fluid">
+	<form class="layui-form" lay-filter="">
+		<div class="layui-row layui-col-space10">
+			<div class="layui-col-md12">
+				<div class="layui-card">
+					<div class="layui-card-header">设置</div>
+					<div class="layui-card-body">
+							<div class="exhibit-layout-div">
+								<div>基本参数</div>
+								<div>
+									<div class="layui-form-item">
+										<label class="layui-form-label" style="width: 60px;">爱好</label>
+										<div class="layui-inline">
+											<div class="layui-input-inline" style="width: 100%;">
+												<input type="radio" name="like" value=1 title="吃喝嫖赌">
+												<input type="radio" name="like" value=2 title="黄赌毒">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="exhibit-layout-div">
+								<div>电视</div>
+								<div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label">还珠格格</label>
+											<div class="layui-input-inline">
+												<input type="text" lay-verify="integer" name="" class="layui-input" value="">
+												<span>分</span>
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label">雪山飞狐</label>
+											<div class="layui-input-inline">
+												<input type="number" lay-verify="integer" name="" class="layui-input" value="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<div class="exhibit-layout-div">
+								<div>出厂配置</div>
+								<div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<div class="layui-input-inline">
+												<input type="checkbox" name="" lay-skin="primary" title="伟大的诗人">
+												<input type="checkbox" name="" lay-skin="primary" title="浑身散发着艺术细胞">
+												<input type="checkbox" name="" lay-skin="primary" title="拥有世界最美的颜值">
+												<input type="checkbox" name="" lay-skin="primary" title="无时无刻散发着魅力">
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label">其他属性</label>
+											<div class="layui-input-inline">
+												<input type="text" name="" class="layui-input" value="">
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label" style="width: 84px;">巡检周期</label>
+											<div class="layui-input-inline">
+												<input type="text" name="" class="layui-input" value="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--公网单灯-->
+							<div class="exhibit-layout-div">
+								<div>公网单灯</div>
+								<div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<div class="layui-input-inline">
+												<input type="checkbox" name="" lay-skin="primary" title="上线主动校时">
+												<input type="checkbox" name="" lay-skin="primary" title="只查上线点">
+												<input type="checkbox" name="" lay-skin="primary" title="自动纠参">
+												<input type="checkbox" name="" lay-skin="primary" title="纠正输出">
+												<input type="checkbox" name="" lay-skin="primary" title="自动填充工况时间戳">
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label" style="width: 84px;">并发点数</label>
+											<div class="layui-input-inline">
+												<input type="number" lay-verify="integer" name="slcNetBatchNum" class="layui-input" value="">
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label" style="width: 84px;">并发间隔</label>
+											<div class="layui-input-inline">
+												<input type="number" lay-verify="integer" name="slcNetBatchDelay" class="layui-input" value="">
+												<span>毫秒</span>
+											</div>
+										</div>
+									</div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<label class="layui-form-label" style="width: 84px;">跳跃因子</label>
+											<div class="layui-input-inline">
+												<input type="number" lay-verify="integer" name="slcNetJumpFactor" class="layui-input" value="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!--站点异常开灯判断-->
+							<div class="exhibit-layout-div">
+								<div>站点异常开灯判断</div>
+								<div>
+									<div class="layui-form-item">
+										<div class="layui-inline">
+											<div class="layui-input-inline">
+												<input type="radio" name="" value=0 title="总路或回路有电流">
+												<input type="radio" name="" value=1 title="总路与回路均有电流">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</form>
+</div>
+<style>
+	.exhibit-layout-div .layui-form-item .layui-input {
+		width: 150px;
+	}
+</style>
+
+
+<script>
+	layui.use(['form'], function() {
+		var $ = layui.$,
+			form = layui.form;
+
+		form.render();
+
+	});
+</script>

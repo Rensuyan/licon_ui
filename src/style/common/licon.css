@@ -1,0 +1,17 @@
+/* 
+
+自定义类
+ 
+ */
+/* 陈列布局，块状信息 */
+.exhibit-layout-div+.exhibit-layout-div {margin-top: 25px;}
+.exhibit-layout-div>div:first-child {padding: 5px 15px;width: 150px;text-align: right;font-weight: bold;line-height: 20px;}
+.exhibit-layout-div>div {display: inline-block;vertical-align: top;}
+.exhibit-layout-div .layui-form-item .layui-form-label {width: auto;padding: 5px;padding-left: 0px;text-align: left;}
+.exhibit-layout-div .layui-form-item .layui-input {display: inline-block;width: 150px;}
+.exhibit-layout-div .layui-form-item {margin-bottom: 0px;}
+.exhibit-layout-div .layui-form-item .layui-inline {margin-bottom: 2px;}
+/* 下拉超出的弹出层 */
+.layer-group-select-hide .layui-layer-content {overflow: inherit !important;}
+/* 按钮 */
+.licon-btn-green i,.licon-btn-blue i,.licon-btn-yellow i,.licon-btn-red i {font-size: 14px !important;margin-right: 5px;}

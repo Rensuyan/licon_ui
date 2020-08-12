@@ -1,0 +1,17 @@
+/* 按钮 */
+.layui-btn.layui-btn-sm {font-size: 14px;}
+.licon-btn-green {background: #5fb878;}
+.licon-btn-blue {background: #467CD4;}
+.licon-btn-yellow {background: #FDA83F;}
+.licon-btn-bluegreen {background: #68D4D2;}
+.licon-btn-red {background: #ff8c8c;}
+/* 状态圆点 */
+.status-dot {display: inline-block;height: 15px;width: 15px;margin-right: 3px;border-radius: 50%;vertical-align: middle;border: 1px solid #666;box-sizing: border-box;}
+.status-red {background: #FF0000;}
+.status-gray {background: #A9A9A9;}
+.status-green {background: #00FF00;}
+/* 表格行顔色 */
+.tr-yellow {background: #F9F3C3;}
+.tr-green {background: #CEF9C4;}
+.tr-red {background: #F9CEC5;}
+.tr-blue {background: #D7FFFF;}

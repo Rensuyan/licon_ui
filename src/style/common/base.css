@@ -1,0 +1,69 @@
+/*基础布局， 基于layui
+  控制字体、边距、长宽等
+*/
+
+html,body {overflow: auto;margin: 0;}
+body {height: 100%;}
+label {font-weight: normal;}
+a {outline: none;}
+@font-face {font-family: ccxyt-notchar;src: url('../../../start/font/ccxyt-notchar.otf');}
+
+/* body,.layui-table td,.layui-table th,.layui-nav-item .iconfont,.layui-layer-title,.layui-layer.layui-layer-dialog .layui-layer-content,.layui-layer.layui-layer-page .layui-layer-content,.layui-form-radio div,.layui-tab-title,.layui-form-label,.layui-card-header,.layui-form-checkbox span,.layui-tab-title li,.layui-card-header {font-size: 14px !important;}
+ */
+/* 表单form */
+.layui-form-item {margin-bottom: 5px;}
+.layui-form-item .layui-form-label {padding: 5px 5px;}
+.layui-form-item .layui-input {height: 30px;line-height: 30px;}
+.layui-form-item .layui-form-switch,.layui-form-item .layui-form-checkbox[lay-skin="primary"] {margin-top: 4px;}
+.layui-form-item .layui-form-radio {margin-top: 2px;}.layui-form-mid {padding: 5px 0 !important;}
+.layui-form-item .layui-inline,.layui-form-item .layui-input-inline{margin-right: 5px;}
+textarea {width: calc(100% - 20px);resize: none;padding: 10px;overflow: auto;}
+/* 表格table */
+.layui-table-body.layui-table-main {margin-right: 0px;margin-bottom: 0px;}
+.layui-table,.layui-table-view .layui-table,.layui-border-box.layui-table-view {margin: 0;width: 100%;}
+.layui-table thead th {font-weight: bold;}
+.layui-table td,.layui-table th {padding: 5px 15px;}
+.layui-table td,.layui-table th,.layui-table .layui-table-cell {height: 24px;line-height: 24px;}
+/* 面板card */
+.layui-card {box-shadow: none;}
+.layui-card .layui-card-header .layui-form-item {line-height: initial;}
+.layui-card .layui-card-header>button.layui-btn-xs,.layui-card .layui-card-header>button.layui-btn-sm {float: right;margin-right: 5px;font-weight: normal;}
+.layui-card .layui-card-header button.layui-btn-xs {margin-top: 6px;}
+.layui-card .layui-card-header button.layui-btn-sm {margin-top: 3px;}
+.layui-card .layui-card-header {height: 30px;line-height: 30px;padding: 0px 5px;}
+.layui-card .layui-card-body{padding: 5px;}
+/* 选项卡tab */
+.layui-tab {margin: 0;color: #666;box-shadow: none;}
+.layui-tab-title .layui-this {color: #666;}
+.layui-tab-title li{padding: 0 10px;}
+.layui-tab .layui-table {border: none;}
+.layui-tab>.layui-tab-content,.layui-card .layui-tab-brief .layui-tab-content {padding: 10px;}
+/*普通tab样式*/
+.layui-tab>.layui-tab-title {border-bottom: none;width: 100%;margin-top: -1px;}
+.layui-tab>.layui-tab-title .layui-this {font-weight: bold;}
+.layui-tab>.layui-tab-title .layui-this:after {border-radius: 0;}
+/* 简约风格的tab */
+.layui-tab-brief {margin: 0;border: none;color: #666;background: #fff;}
+.layui-tab-brief .layui-tab-title {background: #fff;color: #666;border-bottom: unset;width: 100%;margin-top: -1px;border-bottom: 1px solid #f1f1f1;}
+/* 按钮button  */
+.layui-btn-disabled {background: rgb(251, 251, 251);}
+.layui-table-cell .layui-btn+.layui-btn {margin-left: 2px;}
+.layui-btn+.layui-btn {margin-left: 5px;}
+/* 弹出框layer */
+.layui-layer-page .layui-layer-content,.layui-layer-admin .layui-layer-content {padding: 10px;}
+.layui-layer.layui-layer-page {max-width: 100%;max-height: 100%;}
+.layui-layer .layui-layer-title {overflow: inherit;}
+.layui-layer-page .layui-layer-btn,div.layui-layer-btn {padding: 5px;}
+.layui-layer .layui-layer-title .layui-btn {float: right;background: none;margin-right: 20px;}
+.layui-layer .layui-layer-title .layui-btn.layui-btn-sm {margin-top: 7px;}
+.layui-layer .layui-layer-title .layui-btn.layui-btn-xs {margin-top: 11px;}
+/* 分页page */
+.layui-laypage {padding-left: 10px;margin: 5px 0px;}
+.layui-laypage a,.layui-laypage span {border: none;height: 26px;line-height: 26px;font-size: 12px;}
+.layui-laypage span {padding: 0 12px;}
+/* 取色colorpicker */
+.layui-unselect.layui-colorpicker {padding: 0;}
+.layui-colorpicker-trigger-i,.layui-colorpicker-trigger-span {background: none !important;}
+.layui-unselect.layui-colorpicker,.layui-colorpicker-trigger-span {border: none;}
+/* 布局 */
+.layui-row+.layui-row {margin-top: 5px;}
