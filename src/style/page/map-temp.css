@@ -1,0 +1,32 @@
+.map-container,
+.map-container>.layui-row,
+.map-container>.layui-row>div {
+	height: 100%;
+}
+
+.licon-list-message>li {
+	cursor: pointer;
+}
+
+.licon-list-message>li.inline-display {
+	display: inline-block;
+	width: 50%;
+}
+
+.map-list-tool-bar {
+	float: right;
+}
+
+.map-list-tool-bar>span {
+	cursor: pointer;
+}
+
+/* #LAY-app-map-dev-detail {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	background: #fff;
+	top: 0;
+	max-width: 100%;
+}
+ */

@@ -1,0 +1,18 @@
+<!--监控页面，筛选模块-->
+<script type="text/html" template lay-done="layui.data.sendParams(d.params)">
+	<form class="layui-form" lay-filter="">
+	设备的详细信息
+	</form>
+</script>
+<style>
+
+</style>
+<script>
+	layui.data.sendParams = function(params) {
+		layui.use(['form'], function() {
+			var $ = layui.$,
+				form = layui.form;
+			form.render();
+		});
+	};
+</script>

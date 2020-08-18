@@ -21,6 +21,9 @@ layui.extend({
 	apiSys: "common/api/api-system",
 	base: "common/base",
 	api: "common/api/api",
+  mapTemp: "page/map-temp",
+  leafLet:"../lib/extend/leaflet",
+	slimScroll: "../lib/extend/jquery.slimscroll.min",
 }).define(['setter', 'admin'], function(exports){
   var setter = layui.setter
   ,element = layui.element

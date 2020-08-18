@@ -41,6 +41,10 @@
 			"name": "form",
 			"title": "展示信息",
 			"jump": "page/exhibit"
+		}, {
+			"name": "leaflet",
+			"title": "leaflet",
+			"jump": "page/leaflet"
 		}]
 	}, {
 		"name": "echarts",
