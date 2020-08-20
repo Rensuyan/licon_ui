@@ -1,59 +1,87 @@
 <script type="text/html" template>
-    <!-- <link rel="stylesheet" href="{{ layui.setter.base }}style/extend/leaflet.css?v={{ layui.admin.v }}-1" media="all"> -->
+    <link rel="stylesheet" href="{{ layui.setter.base }}style/extend/leaflet/leaflet.css?v={{ layui.admin.v }}-1" media="all">
 </script>
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
 <div class="layui-fluid">
+    <form class="layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">地图类型</label>
+            <div class="layui-input-block">
+                <!-- 1百度，2高德，3arcgis -->
+                <input type="radio" name="mapType" lay-filter="mapType" value="1" title="百度" checked="">
+                <input type="radio" name="mapType" lay-filter="mapType" value="2" title="高德">
+                <input type="radio" name="mapType" lay-filter="mapType" value="3" title="arcgis">
+            </div>
+        </div>
+    </form>
     <div id="allmap" style="height: 600px;"></div>
 </div>
 <script>
     layui.use(['form', 'leafLet'], function () {
-        var $ = layui.$;
-        var map = new L.Map('allmap', {
-            center: new L.LatLng(39.86, 116.45),
-            zoom: 10
+        var $ = layui.$,
+            form = layui.form;
+        var mymap;
+
+        form.on('radio(mapType)', function (data) {
+            // 销毁地图
+            mymap.off();
+            mymap.remove();
+
+            initType(parseInt(data.value), function () {
+                L.marker([32.038444, 118.75727])
+                    .addTo(mymap)
+                    .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
+            });
+        })
+        form.render();
+
+
+        initType(1, function () {
+            L.marker([32.038444, 118.75727])
+                .addTo(mymap)
+                .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
         });
 
+        //不同地图初始化
+        function initType(type, callback) {
+            if (type == 1) {
+                layui.use(['proj4', 'proj4leaflet', 'ChineseTmsProviders'], function () {
+                    mymap = L.map("allmap", {
+                        crs: L.CRS.Baidu,
+                        minZoom: 3,
+                        maxZoom: 18,
+                        attributionControl: false,
+                        center: [32.038444, 118.75727],
+                        zoom: 12
+                    });
+                    L.tileLayer.chinaProvider('Baidu.Normal.Map', {
+                        maxZoom: 18,
+                        minZoom: 5
+                    }).addTo(mymap);
 
-        var baseLayers = {
-            'Sputnik': L.tileLayer('http://{s}.tiles.maps.sputnik.ru/{z}/{x}/{y}.png', {
-                maxZoom: 18,
-                attribution: "Sputnik Layer"
-            }),
+                    if (callback && typeof (callback) == 'function') callback();
+                })
+            } else if (type == 2) {
+                mymap = L.map('allmap', {
+                    minZoom: 3,
+                    maxZoom: 18,
+                    attributionControl: false,
+                    center: [32.038444, 118.75727],
+                    zoom: 12
+                });
+                L.tileLayer('http://webrd01.is.autonavi.com/appmaptile?lang=zh_cn&size=1&scale=1&style=8&x={x}&y={y}&z={z}', {}).addTo(mymap);
+                if (callback && typeof (callback) == 'function') callback();
+            } else if (type == 3) {
+                mymap = L.map('allmap', {
+                    minZoom: 3,
+                    maxZoom: 18,
+                    attributionControl: false,
+                    center: [32.038444, 118.75727],
+                    zoom: 12
+                });
+                L.tileLayer('http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineCommunity/MapServer/tile/{z}/{y}/{x}', {}).addTo(mymap);
+                if (callback && typeof (callback) == 'function') callback();
+            }
+        }
 
-            "CartoDB Positron": L.tileLayer('http://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-                maxZoom: 18
-            }),
-
-            "OSM": L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18
-            }).addTo(map),
-
-            "OpenTopoMap": L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
-                maxZoom: 18
-            }),
-        };
-
-        var layerControl = L.control.layers(baseLayers, {}, {
-            position: 'topleft',
-            collapsed: true
-        }).addTo(map);
-
-        var bj = L.marker([39.92, 116.46]).bindPopup('这里是北京'),
-            sh = L.marker([31.213, 121.445]).bindPopup('这里是上海'),
-            gz = L.marker([23.16, 113.23]).bindPopup('这里是广州');
-        var cities = L.layerGroup([bj, sh, gz]).addTo(map);
-
-        // var mymap = L.map('allmap').setView([41, 123], 13);
-        // L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-        //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        //     maxZoom: 18,
-        //     id: 'mapbox.streets',
-        //     accessToken: '密钥需要申请'
-        // }).addTo(mymap);
-        // L.marker([41, 123])
-        //     .addTo(mymap)
-        //     .bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
     });
 </script>

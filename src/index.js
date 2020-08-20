@@ -23,6 +23,9 @@ layui.extend({
 	api: "common/api/api",
   mapTemp: "page/map-temp",
   leafLet:"../lib/extend/leaflet",
+	ChineseTmsProviders: "../lib/extend/leaflet.ChineseTmsProviders",
+	proj4leaflet: "../lib/extend/proj4leaflet",
+	proj4: "../lib/extend/proj4",
 	slimScroll: "../lib/extend/jquery.slimscroll.min",
 }).define(['setter', 'admin'], function(exports){
   var setter = layui.setter
